@@ -1,14 +1,15 @@
 import "./App.css";
 
 import Header from "./components/header";
-
-import Portfolio from "./components/Main";
+import Main from "./components/Main";
+import Footer from "./components/footer";
 
 function App() {
   return (
     <div>
       <Header />
-      <Portfolio />
+      <Main />
+      <Footer />
     </div>
   );
 }
