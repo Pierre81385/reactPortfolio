@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-export default function Resume() {
+function Resume() {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
   return (
     <div>
-      <h1>Resume Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+      <div>
+        <a href="../PeterBishop_Resume2021.pdf">DOWNLOAD</a>
+      </div>
+      <Document
+        file="../PeterBishop_Resume2021.pdf"
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        {[1, 2].map((page) => (
+          <Page pageNumber={page} />
+        ))}
+      </Document>
     </div>
   );
 }
+
+export default Resume;
