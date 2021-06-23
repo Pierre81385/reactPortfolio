@@ -1,12 +1,11 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 function Portfolio() {
   const projectInfo = [
     {
       id: 1,
-      image: "",
+      image: "./animation.gif",
       title: "BeerMe",
       desc: "An app that suggests beers to the user, and provides random translations to order it in different languages.",
       deploy: "https://tjcourey.github.io/beerMe-international/",
@@ -14,7 +13,7 @@ function Portfolio() {
     },
     {
       id: 2,
-      image: "",
+      image: "./FavoriteRecipes.png",
       title: "Favorite Recipes",
       desc: "A blog style app that allows users to post and comment on favorite recipes.",
       deploy: "https://murmuring-river-43433.herokuapp.com/",
@@ -22,7 +21,7 @@ function Portfolio() {
     },
     {
       id: 3,
-      image: "",
+      image: "./Weather Dashboard.png",
       title: "Weather Dashboard",
       desc: "An app to find the weather forecast in cities around the world.",
       deploy: "https://pierre81385.github.io/weatherDashboard-HW6/",
@@ -62,8 +61,22 @@ function Portfolio() {
         <Card.Body>
           <Card.Title>{card.title}</Card.Title>
           <Card.Text>{card.desc}</Card.Text>
-          <Button variant="primary">Github</Button>
-          <Button variant="primary">Deployed</Button>
+          <a
+            href={card.deploy}
+            class="btn btn-primary btn-lg active"
+            role="button"
+            aria-pressed="true"
+          >
+            Deploy
+          </a>
+          <a
+            href={card.github}
+            class="btn btn-primary btn-lg active"
+            role="button"
+            aria-pressed="true"
+          >
+            Github
+          </a>
         </Card.Body>
       </Card>
     );
