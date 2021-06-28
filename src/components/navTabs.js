@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 const style = {
   a: {
@@ -7,71 +8,65 @@ const style = {
   nav: {
     height: "10px",
   },
+  li: {
+    paddingLeft: "15px",
+  },
 };
 
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <nav style={style.nav}>
-      <ul
-        style={style.ul}
-        className="navbar navbar-expand-lg navbar-light bg-white fixed-top list-unstyled"
-      >
-        <li>
-          <img
-            src="./profile.jpg"
-            style={{ height: "50px", borderRadius: "15px", marginLeft: "10px" }}
-          ></img>
-        </li>
-        <li className="nav-item">
-          <p
-            style={style.a}
+      <ul className="navbar navbar-expand-lg navbar-light bg-white fixed-top list-unstyled">
+        <li className="nav-item" style={style.li}>
+          <Button
+            variant="outline-light"
             onClick={() => handlePageChange("Home")}
-            className={currentPage === "Home" ? "nav-link active" : "nav-link"}
+            //className={currentPage === "Home" ? "nav-link active" : "nav-link"}
           >
-            Home
-          </p>
+            <img
+              src="./profile.jpg"
+              style={{
+                height: "50px",
+                borderRadius: "15px",
+              }}
+            ></img>
+          </Button>
         </li>
-        <li className="nav-item">
-          <p
-            style={style.a}
+        <li className="nav-item" style={style.li}>
+          <Button
+            variant="outline-dark"
             onClick={() => handlePageChange("About")}
-            className={currentPage === "About" ? "nav-link active" : "nav-link"}
+            //className={currentPage === "About" ? "nav-link active" : "nav-link"}
           >
             About
-          </p>
+          </Button>
         </li>
-        <li className="nav-item">
-          <p
-            style={style.a}
+        <li className="nav-item" style={style.li}>
+          <Button
+            variant="outline-dark"
             onClick={() => handlePageChange("Portfolio")}
-            className={
-              currentPage === "Portfolio" ? "nav-link active" : "nav-link"
-            }
+            //className={currentPage === "Resume" ? "nav-link active" : "nav-link" }
           >
             Portfolio
-          </p>
+          </Button>
         </li>
-        <li className="nav-item">
-          <p
-            style={style.a}
+        <li className="nav-item" style={style.li}>
+          <Button
+            variant="outline-dark"
             onClick={() => handlePageChange("Resume")}
-            className={
-              currentPage === "Resume" ? "nav-link active" : "nav-link"
-            }
+            //className={currentPage === "Resume" ? "nav-link active" : "nav-link" }
           >
             Resume
-          </p>
+          </Button>
         </li>
-        <li className="nav-item">
-          <p
-            style={style.a}
+        <li className="nav-item" style={style.li}>
+          <Button
+            variant="outline-dark"
             onClick={() => handlePageChange("Contact")}
-            className={
-              currentPage === "Contact" ? "nav-link active" : "nav-link"
-            }
+            //className={currentPage === "Resume" ? "nav-link active" : "nav-link" }
           >
             Contact
-          </p>
+          </Button>
         </li>
       </ul>
     </nav>

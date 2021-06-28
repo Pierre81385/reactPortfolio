@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Carousel, CarouselItem } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 function Portfolio() {
   const projectInfo = [
@@ -69,6 +70,10 @@ function Portfolio() {
       height: "100vh",
       paddingTop: "30px",
     },
+    Button: {
+      marginLeft: "5px",
+      marginRight: "5px",
+    },
   };
 
   const renderCard = (card) => {
@@ -84,26 +89,30 @@ function Portfolio() {
             <Card.Title>{card.title}</Card.Title>
 
             <Card.Text>{card.desc}</Card.Text>
-            <footer>
-              <a
+            <Card.Footer class="text-center">
+              <Button
+                style={style.Button}
                 href={card.deploy}
-                class="btn btn-primary btn-lg active"
+                variant="outline-dark"
+                class="btn btn-primary btn-lg active float-left"
                 role="button"
                 aria-pressed="true"
                 block
               >
                 Deploy
-              </a>
-              <a
+              </Button>
+              <Button
+                style={style.Button}
+                variant="outline-dark"
                 href={card.github}
-                class="btn btn-primary btn-lg active"
+                class="btn btn-primary btn-lg active float-right"
                 role="button"
                 aria-pressed="true"
                 block
               >
                 Github
-              </a>
-            </footer>
+              </Button>
+            </Card.Footer>
           </Card.Body>
         </Card>
         <a

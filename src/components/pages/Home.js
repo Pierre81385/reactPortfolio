@@ -27,6 +27,18 @@ export default function Home() {
   return (
     <div style={style.div}>
       <h1 style={style.h1}>Peter J Bishop</h1>
+      <p>
+        Welcome to my portfolio! I hope that over time I'll continue to update
+        this site to continuously demonstrate skills and technologies I've
+        learned.
+      </p>
+      <p>
+        As it stands today, this page currerntly uses React to handle routing,
+        and is styled with React-Bootstrap. React-PDF is used to display my
+        resume on the resume page. The contact page is non-functional, but
+        primarily because I haven't setup the necessary Google developer account
+        to use what I've built.
+      </p>
     </div>
   );
 }
