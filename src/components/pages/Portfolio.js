@@ -6,7 +6,7 @@ function Portfolio() {
   const projectInfo = [
     {
       id: 0,
-      image: "./animation.gif",
+      image: "./Animation.gif",
       title: "BeerMe",
       desc: "An app that suggests beers to the user, and provides random translations to order it in different languages.",
       deploy: "https://tjcourey.github.io/beerMe-international/",
