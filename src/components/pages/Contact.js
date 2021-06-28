@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
 
 const style = {
   div: {
@@ -59,9 +60,14 @@ const Contact = () => {
           <label htmlFor="message">Message</label>
           <textarea className="form-control" rows="5"></textarea>
         </div>
-        <button type="submit" className="btn btn-primary" style={style.button}>
+        <Button
+          type="submit"
+          variant="outline-light"
+          className="btn"
+          style={style.button}
+        >
           {status}
-        </button>
+        </Button>
       </form>
     </div>
   );
