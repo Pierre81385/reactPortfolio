@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div style={{ justifyContent: "center" }}>
+      <h1>Peter J Bishop</h1>
+      <img
+        src="../profile.jpg"
+        style={{ width: "250px", borderRadius: "50px" }}
+      ></img>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
         velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
