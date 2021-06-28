@@ -31,7 +31,7 @@ function Portfolio() {
     },
     {
       id: 3,
-      image: "",
+      image: "./employeeTracker.png",
       title: "Employee Tracker",
       desc: "A CLI employee management system.",
       deploy:
@@ -40,7 +40,7 @@ function Portfolio() {
     },
     {
       id: 4,
-      image: "",
+      image: "./fitnessTracker.png",
       title: "Fitness Tracker",
       desc: "A application to help with fitness goals and exercise tracking",
       deploy: "https://lit-everglades-43357.herokuapp.com/",
@@ -48,7 +48,7 @@ function Portfolio() {
     },
     {
       id: 5,
-      image: "",
+      image: "./budgetTracker.png",
       title: "Budget Tracker",
       desc: "A budgeting tool that has both online and offline functionality",
       deploy: "https://cryptic-refuge-05653.herokuapp.com/ ",
