@@ -10,8 +10,20 @@ function Resume() {
     setNumPages(numPages);
   }
 
+  const style = {
+    div: {
+      backgroundImage:
+        "url(./eberhard-grossgasteiger-xC7Ho08RYF4-unsplash.jpg)",
+      backgroundSize: "cover",
+      height: "100vh",
+      color: "white",
+      paddingTop: "30px",
+      paddingLeft: "30px",
+    },
+  };
+
   return (
-    <div>
+    <div style={style.div}>
       <div>
         <a href="../PeterBishop_Resume2021.pdf">DOWNLOAD</a>
       </div>
@@ -20,7 +32,7 @@ function Resume() {
         onLoadSuccess={onDocumentLoadSuccess}
       >
         {[1, 2].map((page) => (
-          <Page pageNumber={page} />
+          <Page pageNumber={page} style={{ size: "A4" }} />
         ))}
       </Document>
     </div>

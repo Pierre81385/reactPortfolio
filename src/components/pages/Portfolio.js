@@ -55,14 +55,26 @@ function Portfolio() {
     },
   ];
 
+  const style = {
+    card: {
+      width: "250px",
+      flex: 1,
+      margin: "0 auto",
+      height: "500px",
+    },
+    div: {
+      backgroundImage:
+        "url(./eberhard-grossgasteiger-xC7Ho08RYF4-unsplash.jpg)",
+      backgroundSize: "cover",
+      height: "100vh",
+      paddingTop: "30px",
+    },
+  };
+
   const renderCard = (card) => {
     return (
       <CarouselItem>
-        <Card
-          className="card"
-          style={{ width: "250px", flex: 1, margin: "0 auto", height: "500px" }}
-          key={card.id}
-        >
+        <Card className="card" style={style.card} key={card.id}>
           <Card.Img
             variant="top"
             src={card.image}
@@ -101,7 +113,7 @@ function Portfolio() {
           data-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only" style={{ color: "black" }}>
+          <span class="sr-only" style={{ color: "white" }}>
             Previous
           </span>
         </a>
@@ -112,7 +124,7 @@ function Portfolio() {
           data-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only" style={{ color: "black" }}>
+          <span class="sr-only" style={{ color: "white" }}>
             Next
           </span>
         </a>
@@ -121,7 +133,7 @@ function Portfolio() {
   };
 
   return (
-    <div>
+    <div style={style.div}>
       <Carousel
         id="carouselExampleControls"
         class="carousel slide "
